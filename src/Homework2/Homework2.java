@@ -10,28 +10,27 @@ package Homework2;
 public class Homework2 {
 
     public static void main(String[] args) {
-        System.out.println(CheckSum (2, 7));
-        System.out.println(CheckNumb (-3));
-        System.out.println(CrissCross (77));
-        PrintString (3);
+        System.out.println(checkSum (6, 7));
+        System.out.println(checkNumb (-3));
+        System.out.println(crissCross (77));
+        printString ("Hello!", 4);
     }
 
-    static boolean CheckSum (int a, int b) {
-        int c = a + b;
-        return (10 <= c) && (20 >= c);
+    static boolean checkSum (int a, int b) {
+        return a + b >= 10 && a + b <= 20;
     }
 
-    static String CheckNumb (int n) {
+    static String checkNumb (int n) {
         return n >= 0? "Положительное" : "Отрицательное";
     }
 
-    static boolean CrissCross (int i) {
-        return 0 > i;
+    static boolean crissCross (int i) {
+        return i < 0;
     }
 
-    static void PrintString (int s) {
-        for (int j = 0; j < s; j++) {
-            System.out.println("Hello world!");
+    static void printString (String s, int j) {
+        for (int i = 0; i < j; i++) {
+            System.out.println(s);
         }
     }
 }
